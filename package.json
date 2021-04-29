@@ -1,0 +1,18 @@
+{
+  "name": "rxjs_explore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node serverObs.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@akanass/rx-http-request": "^3.3.0",
+    "node-fetch": "^2.6.1",
+    "rxjs": "^6.6.7"
+  }
+}
