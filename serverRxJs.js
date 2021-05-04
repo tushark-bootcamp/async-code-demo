@@ -23,7 +23,7 @@ const firstFunction = new Observable(subscriber => {
 
 
 
-// Use .subscribe() over .pipe() when you want to return the incoming data stream without any transformation.
+// Use .subscribe() without .pipe() when you want to return the incoming data stream without any transformation.
 const secondFunction = new Observable(subscriber => {
     //console.log('Second function');
     firstFunction.subscribe(queryURL => {
@@ -40,8 +40,8 @@ const secondFunction = new Observable(subscriber => {
     });
 });
 
-// Uses .pipe(exhaustMap()) as an alternative to .subscribe()
-// Use .pipe() instead of .subscribe() when you need to transform the data stream using various operators like map, tap, exhaustMap available in .pipe() 
+// Uses .pipe(exhaustMap()) to funnel the data into .subscribe()
+// Use .pipe() to funnel the data into .subscribe() when you need to transform the data stream using various operators like map, tap, exhaustMap available in .pipe() 
 const secondFunction2 = new Observable(subscriber => {
     //console.log('Second function');
     firstFunction
