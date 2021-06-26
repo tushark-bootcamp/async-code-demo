@@ -43,7 +43,8 @@ const secondFunction = new Observable(subscriber => {
 });
 
 // Uses .pipe(exhaustMap()) to funnel the data into .subscribe()
-// Use .pipe() to funnel the data into .subscribe() when you need to transform the data stream using various operators like map, tap, exhaustMap available in .pipe() 
+// Use .pipe() to funnel the data into .subscribe() when you need to transform the data stream using various operators like map, tap, exhaustMap available in .pipe()
+// Though we don't do any transformation here, this is just to demo how you could apply transformaton using .pipe() before calling the .subscribe() 
 const secondFunction2 = new Observable(subscriber => {
     //console.log('Second function');
     firstFunction
@@ -81,7 +82,6 @@ function main() {
         console.log('Now Calling third function');
         console.log(y);
     });
-
 }
 
 main();
