@@ -14,11 +14,13 @@ const RxHR = require('@akanass/rx-http-request').RxHR;
 const fetch = require("node-fetch");
 
 const firstFunction = new Observable(subscriber => {
-    console.log('First function');
-    const movie = 'Lion King';
-    const queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
-    subscriber.next(queryURL);
-    //next.handle(queryURL);
+    setTimeout(() => {
+        console.log('First function');
+        const movie = 'Lion King';
+        const queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
+        subscriber.next(queryURL);
+        //next.handle(queryURL);
+    }, 2000);
 });
 
 

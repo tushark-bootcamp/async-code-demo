@@ -1,10 +1,11 @@
 const fetch = require("node-fetch");
 
-// callback is just another function it takes as an argument. 
 function firstFunction() {
     return new Promise((resolve, reject) => {
-        resolve('First Function');
-    })
+        setTimeout(() => {
+            resolve('First Function');
+        }, 2000); 
+    });
 }
 
 function secondFunction() {
