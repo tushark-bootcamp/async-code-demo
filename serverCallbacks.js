@@ -1,9 +1,12 @@
 const fetch = require("node-fetch");
 
-// callback is just another function it takes as an argument. 
+// callback is just another function that is passed as an argument.
+// This demonstrates how the callback function passed in as a parameter is called only after the execution of firstFunction.
 function firstFunction(callback) {
-    console.log('First Function');
-    callback();
+    setTimeout(() => {
+        console.log('First Function');
+        callback();
+    }, 1500);
 }
 
 function secondFunction(callback) {
